@@ -1,0 +1,11 @@
+export const CAMERA_FAR = 6000;
+export const CAMERA_NEAR = 0.05;
+export const INTRO_POSITION: [number, number, number] = [14, 4, 12];
+export const FLIGHT_DAMPING = 2.4;
+export const BANK_DAMPING = 3;
+export const LOOK_DAMPING = 2.5;
+export const BANK_GAIN = 0.4;
+export const MAX_BANK = 0.3;
+export const HEAD_YAW = 0.08;
+export const HEAD_PITCH = 0.05;
+export const MIN_FRAME_TIME = 1 / 240;
