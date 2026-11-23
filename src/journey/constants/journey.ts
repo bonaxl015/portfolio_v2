@@ -1,0 +1,9 @@
+export const STATION_SELECTOR = '[data-station]';
+export const STATION_HOLD = 0.14;
+export const REDUCED_MOTION_HOLD = 0.5;
+export const CAMERA_FOV = 42;
+export const LANDSCAPE_OFFSET = 0.34;
+export const PORTRAIT_OFFSET = 0.46;
+export const LANDSCAPE_REFERENCE_ASPECT = 1.6;
+export const PORTRAIT_REFERENCE_ASPECT = 1.1;
+export const HEADING_EPSILON = 1e-4;
