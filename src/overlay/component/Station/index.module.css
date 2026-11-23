@@ -1,0 +1,52 @@
+.station {
+  position: relative;
+  z-index: 2;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(0, 36rem);
+  grid-template-rows: 1fr auto;
+  row-gap: 2.5rem;
+  padding: 7rem var(--rail-space) 2.5rem var(--gutter);
+}
+
+.station + .station {
+  margin-top: 75svh;
+}
+
+.content {
+  align-self: center;
+}
+
+@supports (animation-timeline: view()) {
+  .station > * {
+    animation: fade-through linear both;
+    animation-timeline: view();
+  }
+}
+
+@keyframes fade-through {
+  entry 0% {
+    opacity: 0;
+  }
+
+  entry 100% {
+    opacity: 1;
+  }
+
+  exit 0% {
+    opacity: 1;
+  }
+
+  exit 65% {
+    opacity: 0;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .station {
+    grid-template-rows: auto auto;
+    align-content: end;
+    row-gap: 2rem;
+    padding: 52svh 3.75rem 2.5rem var(--gutter);
+  }
+}

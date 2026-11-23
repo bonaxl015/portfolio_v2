@@ -1,0 +1,23 @@
+.scrim {
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgb(0 0 0 / 0.78) 0%,
+    rgb(0 0 0 / 0.5) 32%,
+    rgb(0 0 0 / 0) 58%
+  );
+  pointer-events: none;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .scrim {
+    background: linear-gradient(
+      0deg,
+      rgb(0 0 0 / 0.85) 0%,
+      rgb(0 0 0 / 0.55) 45%,
+      rgb(0 0 0 / 0) 62%
+    );
+  }
+}

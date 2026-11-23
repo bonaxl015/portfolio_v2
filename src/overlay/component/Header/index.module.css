@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  z-index: 3;
+  inset: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem var(--gutter) 3rem;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.92) 0%, rgb(0 0 0 / 0.7) 50%, rgb(0 0 0 / 0) 100%);
+  pointer-events: none;
+}
+
+.brand,
+.contact {
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+}
+
+.contact {
+  color: var(--dust);
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+
+.contact:hover {
+  color: var(--starlight);
+}

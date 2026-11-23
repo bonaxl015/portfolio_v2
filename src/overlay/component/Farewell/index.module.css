@@ -1,0 +1,16 @@
+.back {
+  margin-top: 2rem;
+}
+
+.footer {
+  display: grid;
+  gap: 0.4rem;
+  max-width: 34rem;
+  margin-top: 4rem;
+  color: var(--faint);
+  font-size: 0.8125rem;
+}
+
+.footer a {
+  color: var(--dust);
+}

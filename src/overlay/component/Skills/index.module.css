@@ -1,0 +1,39 @@
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 2.5rem;
+  max-width: 32rem;
+  margin-top: 2rem;
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 0.5rem;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.level {
+  color: var(--dust);
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.gauge {
+  position: relative;
+  grid-column: 1 / -1;
+  height: 2px;
+  background: var(--line);
+}
+
+.gauge::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: scaleX(var(--level));
+  transform-origin: left;
+}

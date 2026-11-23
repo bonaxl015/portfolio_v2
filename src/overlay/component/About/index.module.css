@@ -1,0 +1,16 @@
+.facts {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 30rem;
+  margin-top: 2rem;
+}
+
+.fact {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 1rem;
+}
+
+.label {
+  color: var(--dust);
+}

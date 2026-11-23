@@ -1,0 +1,57 @@
+.reticle {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 5.5rem;
+  height: 5.5rem;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.reticle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgb(238 241 246 / 0.7);
+  transform: translate(-50%, -50%);
+}
+
+.corner {
+  position: absolute;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 0 solid rgb(238 241 246 / 0.55);
+}
+
+.corner:nth-child(1) {
+  top: 0;
+  left: 0;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+.corner:nth-child(2) {
+  top: 0;
+  right: 0;
+  border-top-width: 1px;
+  border-right-width: 1px;
+}
+
+.corner:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+.corner:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+}

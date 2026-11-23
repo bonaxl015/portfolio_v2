@@ -1,0 +1,44 @@
+.quote {
+  max-width: 36rem;
+  min-height: 15rem;
+}
+
+.text {
+  font-size: clamp(1.0625rem, 1.35vw, 1.25rem);
+  line-height: 1.6;
+}
+
+.text::before {
+  content: '“';
+}
+
+.text::after {
+  content: '”';
+}
+
+.caption {
+  display: grid;
+  margin-top: 1.25rem;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.role {
+  color: var(--dust);
+  font-size: 0.9375rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.count {
+  color: var(--faint);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
