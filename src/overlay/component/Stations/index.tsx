@@ -7,14 +7,7 @@ export const Stations = memo(function Stations() {
   return (
     <main>
       {PLANETS.map((planet) => (
-        <Station
-          key={planet.id}
-          id={planet.id}
-          name={planet.name}
-          accent={planet.accent}
-          distanceKm={planet.facts.distanceKm}
-          dayHours={planet.facts.dayHours}
-        >
+        <Station key={planet.id} id={planet.id} accent={planet.accent}>
           {STATION_CONTENT[planet.id]}
         </Station>
       ))}

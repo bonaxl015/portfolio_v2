@@ -2,7 +2,6 @@ import type { PlanetId } from './enums/planetId';
 
 export type PlanetFacts = {
   distanceKm: number;
-  dayHours: number;
 };
 
 export type PlanetSurface = {
