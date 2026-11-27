@@ -4,8 +4,6 @@
   min-height: 100svh;
   display: grid;
   grid-template-columns: minmax(0, 36rem);
-  grid-template-rows: 1fr auto;
-  row-gap: 2.5rem;
   padding: 7rem var(--rail-space) 2.5rem var(--gutter);
 }
 
@@ -21,6 +19,12 @@
   .station > * {
     animation: fade-through linear both;
     animation-timeline: view();
+  }
+
+  @media (max-aspect-ratio: 1/1), (max-height: 30rem) {
+    .station > * {
+      animation-name: fade-through-reading;
+    }
   }
 }
 
@@ -42,11 +46,34 @@
   }
 }
 
+@keyframes fade-through-reading {
+  entry 0% {
+    opacity: 0;
+  }
+
+  entry 40% {
+    opacity: 1;
+  }
+
+  exit 60% {
+    opacity: 1;
+  }
+
+  exit 100% {
+    opacity: 0;
+  }
+}
+
 @media (max-aspect-ratio: 1/1) {
   .station {
-    grid-template-rows: auto auto;
     align-content: end;
-    row-gap: 2rem;
     padding: 52svh 3.75rem 2.5rem var(--gutter);
+  }
+
+  .content {
+    text-shadow:
+      0 0 3px rgb(0 0 0 / 0.95),
+      0 0 10px rgb(0 0 0 / 0.9),
+      0 0 24px rgb(0 0 0 / 0.8);
   }
 }

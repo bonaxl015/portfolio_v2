@@ -1,39 +1,49 @@
-.skills {
+.groups {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem 2.5rem;
-  max-width: 32rem;
-  margin-top: 2rem;
+  grid-template-columns: max-content 1fr;
+  column-gap: 1.25rem;
+  max-width: 34rem;
+  margin-top: 1.75rem;
 }
 
-.skill {
+.group {
   display: grid;
-  grid-template-columns: 1fr auto;
-  row-gap: 0.5rem;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  row-gap: 0.25rem;
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--line);
 }
 
-.name {
+.group:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.label {
+  padding-top: 0.15rem;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
   font-weight: 500;
 }
 
-.level {
-  color: var(--dust);
-  font-size: 0.9375rem;
-  font-variant-numeric: tabular-nums;
+.tool:not(:last-child)::after {
+  content: '·';
+  content: '·' / '';
+  padding: 0 0.5rem;
+  color: var(--faint);
 }
 
-.gauge {
-  position: relative;
-  grid-column: 1 / -1;
-  height: 2px;
-  background: var(--line);
-}
-
-.gauge::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--accent);
-  transform: scaleX(var(--level));
-  transform-origin: left;
+@media (max-width: 30rem) {
+  .group {
+    grid-template-columns: 1fr;
+  }
 }

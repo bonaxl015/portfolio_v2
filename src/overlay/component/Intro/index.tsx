@@ -10,7 +10,7 @@ export function Intro() {
       </p>
       <p className="lede">{PROFILE.summary}</p>
       <div className={styles.actions}>
-        <a className="action" href="#neptune">
+        <a className="action" href="#pluto">
           Get in touch
         </a>
         <a className="quiet" href="#venus">

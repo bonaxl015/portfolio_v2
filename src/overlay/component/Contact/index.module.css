@@ -22,6 +22,11 @@
   overflow-wrap: anywhere;
 }
 
+.copyable {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
 .channel:hover .value {
   color: var(--accent);
 }

@@ -1,12 +1,13 @@
 import type { ReactNode } from 'react';
-import { ENGINEERING_SKILLS, FRONT_END_SKILLS } from '../../content';
-import { PLUTO, type PlanetId } from '../../planets';
+import { BACK_END_TOOLKIT, FRONT_END_TOOLKIT } from '../../content';
+import type { PlanetId } from '../../planets';
 import { About } from '../component/About';
+import { AgenticAi } from '../component/AgenticAi';
 import { Career } from '../component/Career';
 import { Contact } from '../component/Contact';
+import { DevOps } from '../component/DevOps';
 import { Farewell } from '../component/Farewell';
 import { Intro } from '../component/Intro';
-import { Services } from '../component/Services';
 import { Skills } from '../component/Skills';
 import { Testimonials } from '../component/Testimonials';
 
@@ -16,20 +17,25 @@ export const STATION_CONTENT: Record<PlanetId, ReactNode> = {
   earth: (
     <Skills
       title="Front-end toolkit"
-      intro="The languages and frameworks I build interfaces with."
-      skills={FRONT_END_SKILLS}
+      intro="What I use to design, build and ship interfaces for the web and mobile."
+      groups={FRONT_END_TOOLKIT}
     />
   ),
   mars: (
     <Skills
-      title="Back end and tooling"
-      intro="The server-side and build tools behind those interfaces."
-      skills={ENGINEERING_SKILLS}
+      title="Back-end toolkit"
+      intro="The services and data behind those interfaces."
+      groups={BACK_END_TOOLKIT}
     />
   ),
-  jupiter: <Career />,
-  saturn: <Services />,
-  uranus: <Testimonials />,
-  neptune: <Contact />,
-  pluto: <Farewell distanceKm={PLUTO.facts.distanceKm} />,
+  jupiter: <DevOps />,
+  saturn: <AgenticAi />,
+  uranus: <Career />,
+  neptune: <Testimonials />,
+  pluto: (
+    <>
+      <Contact />
+      <Farewell />
+    </>
+  ),
 };

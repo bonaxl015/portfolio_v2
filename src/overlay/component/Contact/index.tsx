@@ -1,4 +1,5 @@
 import { CONTACT_CHANNELS } from '../../../content';
+import { followUnlessSelecting } from './followUnlessSelecting';
 import styles from './index.module.css';
 
 export function Contact() {
@@ -11,9 +12,18 @@ export function Contact() {
       <ul className={styles.channels}>
         {CONTACT_CHANNELS.map((channel) => (
           <li key={channel.label}>
-            <a className={styles.channel} href={channel.href}>
+            <a
+              className={styles.channel}
+              href={channel.href}
+              target={channel.newTab ? '_blank' : undefined}
+              rel={channel.newTab ? 'noopener noreferrer' : undefined}
+              draggable={channel.copyable ? false : undefined}
+              onClick={channel.copyable ? followUnlessSelecting : undefined}
+            >
               <span className={styles.label}>{channel.label}</span>
-              <span className={styles.value}>{channel.value}</span>
+              <span className={channel.copyable ? `${styles.value} ${styles.copyable}` : styles.value}>
+                {channel.value}
+              </span>
             </a>
           </li>
         ))}

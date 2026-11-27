@@ -7,7 +7,7 @@ export function Header() {
       <a className={styles.brand} href="#mercury">
         {PROFILE.name}
       </a>
-      <a className={styles.contact} href="#neptune">
+      <a className={styles.contact} href="#pluto">
         Contact
       </a>
     </header>

@@ -1,0 +1,49 @@
+.practices {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 34rem;
+  margin: 1.75rem 0;
+}
+
+.title {
+  margin-bottom: 0.4rem;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.description {
+  color: var(--dust);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 1.25rem;
+  max-width: 34rem;
+}
+
+.project {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  row-gap: 0.25rem;
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.project:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.name {
+  font-weight: 500;
+}
+
+@media (max-width: 30rem) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+}

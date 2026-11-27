@@ -1,19 +1,9 @@
 import { PROFILE } from '../../../content';
-import { formatDistance, formatDuration, lightSeconds } from '../../../planets';
 import styles from './index.module.css';
 
-type Props = {
-  distanceKm: number;
-};
-
-export function Farewell({ distanceKm }: Props) {
+export function Farewell() {
   return (
     <>
-      <h2 className="heading">You made it to Pluto</h2>
-      <p className="lede">
-        {formatDistance(distanceKm)} from the Sun, where sunlight takes{' '}
-        {formatDuration(lightSeconds(distanceKm))} to arrive. Thanks for flying out this far.
-      </p>
       <div className={styles.back}>
         <a className="action" href="#mercury">
           Fly back to Mercury
