@@ -5,22 +5,30 @@ export type Profile = {
   summary: string;
   about: string;
   experience: string;
+  focus: string;
   languages: readonly string[];
 };
 
-export type Skill = {
-  name: string;
-  level: number;
+export type ToolGroup = {
+  label: string;
+  tools: readonly string[];
 };
 
 export type CareerEntry = {
   period: string;
   title: string;
+  company: string;
+  highlight: string;
 };
 
-export type Service = {
+export type Practice = {
   title: string;
   description: string;
+};
+
+export type AgentBuiltProject = {
+  name: string;
+  summary: string;
 };
 
 export type Testimonial = {
@@ -33,4 +41,6 @@ export type ContactChannel = {
   label: string;
   value: string;
   href: string;
+  newTab: boolean;
+  copyable: boolean;
 };

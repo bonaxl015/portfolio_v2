@@ -9,7 +9,10 @@ export function Career() {
         {CAREER.map((entry) => (
           <li key={entry.period} className={styles.entry}>
             <p className={styles.period}>{entry.period}</p>
-            <p className={styles.title}>{entry.title}</p>
+            <p className={styles.title}>
+              {entry.title} <span className={styles.company}>· {entry.company}</span>
+            </p>
+            <p className={styles.highlight}>{entry.highlight}</p>
           </li>
         ))}
       </ol>
